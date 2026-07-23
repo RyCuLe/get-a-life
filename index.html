@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get a Life!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Get a Life!</h1>
+
+    <div class="tabs">
+      <button id="tab-appearance" onclick="showTab('appearance')">Appearance</button>
+      <button id="tab-personality" onclick="showTab('personality')">Personality</button>
+      <button id="tab-skills" onclick="showTab('skills')">Skills</button>
+      <button id="tab-career" onclick="showTab('career')">Career</button>
+      <button id="tab-aspiration" onclick="showTab('aspiration')">Aspirations</button>
+    </div>
+
+    <div class="tab-view-wrapper">
+
+      <div id="appearance" class="tab-content active">
+        <div class="panel result-card">
+          <h3>Name</h3>
+          <input type="text" id="playerName" placeholder="Enter your name">
+
+          <h3>Avatar</h3>
+          <p>Upload the picture you drew for your first task.</p>
+          <input type="file" id="avatarImage" accept="image/*">
+        </div>
+      </div>
+
+      <div id="personality" class="tab-content">
+        <div class="panel">
+          <div id="trait1-bar" class="trait-box"></div>
+          <div class="achievement-row">
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/348570.png" alt="Shy Guy Plains Badge">
+              <a href="https://retroachievements.org/achievement/3420" target="_blank">Shy Guy Plains (10)</a>
+              <p>Super Mario Bros. 2 (NES)</p>
+              <label><input type="checkbox" id="shy1"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/242995.png" alt="Mortal Kombat Badge">
+              <a href="https://retroachievements.org/achievement/9875" target="_blank">That's Gonna Leave a Mark (5)</a>
+              <p>Mortal Kombat (SNES)</p>
+              <label><input type="checkbox" id="shy2"></label>
+            </div>
+            <div class="achievement-card">
+              <div class="task-icon">🎨</div>
+              <strong>Draw a picture of your avatar</strong>
+              <label><input type="checkbox" id="shy3"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div id="trait2-bar" class="trait-box"></div>
+          <div class="achievement-row">
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/265697.png" alt="WarioWare Badge">
+              <a href="https://retroachievements.org/achievement/10118" target="_blank">You Might Be Thinking: "What the Hell Am I Playing?" (5)</a>
+              <p>WarioWare Inc. (GBA)</p>
+              <label><input type="checkbox" id="nice1"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/377372.png" alt="Choro Q HG2 Badge">
+              <a href="https://retroachievements.org/achievement/334260" target="_blank">A Good Deed (2)</a>
+              <p>Choro Q HG2 (PS2)</p>
+              <label><input type="checkbox" id="nice2"></label>
+            </div>
+            <div class="achievement-card">
+              <div class="task-icon">💬</div>
+              <strong>Post a nice message on someone else's wall</strong>
+              <label><input type="checkbox" id="nice3"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div id="trait3-bar" class="trait-box"></div>
+          <div class="achievement-row">
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/97355.png" alt="Serious Sam Badge">
+              <a href="https://retroachievements.org/achievement/88978" target="_blank">Yeah, it's all fun and games until somebody loses an eye! (5)</a>
+              <p>Serious Sam Advance (GBA)</p>
+              <label><input type="checkbox" id="play1"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/113169.png" alt="Toys Badge">
+              <a href="https://retroachievements.org/achievement/104161" target="_blank">Toy Blocks Wizard (5)</a>
+              <p>Toys (PS1)</p>
+              <label><input type="checkbox" id="play2"></label>
+            </div>
+            <div class="achievement-card">
+              <div class="task-icon">🧸</div>
+              <strong>Earn 25 points from the Misc. - Based on a Toy hub</strong>
+              <label><input type="checkbox" id="play3"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div id="trait4-bar" class="trait-box"></div>
+          <div class="achievement-row">
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/87937.png" alt="Metal Gear Solid Badge">
+              <a href="https://retroachievements.org/achievement/81340" target="_blank">I'm Not Being Stealthy At All! (2)</a>
+              <p>Metal Gear Solid (PS1)</p>
+              <label><input type="checkbox" id="neat1"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/53445.png" alt="Final Fight Badge">
+              <a href="https://retroachievements.org/achievement/51768" target="_blank">Cleaning up the Streets (5)</a>
+              <p>Final Fight (SNES)</p>
+              <label><input type="checkbox" id="neat2"></label>
+            </div>
+            <div class="achievement-card">
+              <div class="task-icon">🖥</div>
+              <strong>Take a photo of your gaming set-up in a tidy state</strong>
+              <label><input type="checkbox" id="neat3"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div id="trait5-bar" class="trait-box"></div>
+          <div class="achievement-row">
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/248314.png" alt="Breath of Fire Badge">
+              <a href="https://retroachievements.org/achievement/17734" target="_blank">Wake Up Warrior (5)</a>
+              <p>Breath of Fire (SNES)</p>
+              <label><input type="checkbox" id="active1"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/444892.png" alt="Center Ring Boxing Badge">
+              <a href="https://retroachievements.org/achievement/394091" target="_blank">Oh You Want Something Too Old Man!?</a>
+              <p>Center Ring Boxing (SAT)</p>
+              <label><input type="checkbox" id="active2"></label>
+            </div>
+            <div class="achievement-card">
+              <div class="task-icon">🌱</div>
+              <strong>Take a photo of your hands, shoes or pet touching grass</strong>
+              <label><input type="checkbox" id="active3"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="skills" class="tab-content">
+        <div class="panel">
+          <div id="skillCook" class="trait-box"></div>
+          <div class="achievement-row">
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/160851.png" alt="Egg Mania Badge">
+              <a href="https://retroachievements.org/achievement/121070" target="_blank">Let's Get Cracking (2)</a>
+              <p>Egg Mania (GBA)</p>
+              <label><input type="checkbox" id="cook1"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/210630.png" alt="Cooking Mama Badge">
+              <a href="https://retroachievements.org/achievement/189722" target="_blank">10 Recipes (5)</a>
+              <p>Cooking Mama 2 (DS)</p>
+              <label><input type="checkbox" id="cook2"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/474900.png" alt="Hitman Badge">
+              <a href="https://retroachievements.org/achievement/420501" target="_blank">Wine O'Clock (5)</a>
+              <p>Hitman Blood Money (PS2)</p>
+              <label><input type="checkbox" id="cook3"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div id="skillMech" class="trait-box"></div>
+          <div class="achievement-row">
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/439099.png" alt="Gundam Badge">
+              <a href="https://retroachievements.org/achievement/388485" target="_blank">Night Raid (5)</a>
+              <p>Gundam Side Story I (SAT)</p>
+              <label><input type="checkbox" id="mech1"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/370424.png" alt="Bomberman Badge">
+              <a href="https://retroachievements.org/achievement/329511" target="_blank">Blast Off! (5)</a>
+              <p>Bomberman DS</p>
+              <label><input type="checkbox" id="mech2"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/102030.png" alt="Mega Man Badge">
+              <a href="https://retroachievements.org/achievement/92665" target="_blank">The Fighting Robot (5)</a>
+              <p>Mega Man ARC</p>
+              <label><input type="checkbox" id="mech3"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div id="skillChar" class="trait-box"></div>
+          <div class="achievement-row">
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/342537.png" alt="Fire Emblem Badge">
+              <a href="https://retroachievements.org/achievement/309292" target="_blank">Recruit Wyrs (1)</a>
+              <p>Fire Emblem: Shadow Dragon (DS)</p>
+              <label><input type="checkbox" id="char1"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/658089.png" alt="Marvel Badge">
+              <a href="https://retroachievements.org/achievement/578574" target="_blank">Superhero for Hire (2)</a>
+              <p>Marvel Ultimate Alliance (PS2)</p>
+              <label><input type="checkbox" id="char2"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/409856.png" alt="Puyo Puyo Badge">
+              <a href="https://retroachievements.org/achievement/364223" target="_blank">Tara (3)</a>
+              <p>Puyo Puyo Da! (DC)</p>
+              <label><input type="checkbox" id="char3"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div id="skillBody" class="trait-box"></div>
+          <div class="achievement-row">
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/277065.png" alt="Tony Hawk Badge">
+              <a href="https://retroachievements.org/achievement/250336" target="_blank">Training Wheels (1)</a>
+              <p>Tony Hawk's Underground (PS2)</p>
+              <label><input type="checkbox" id="body1"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/510854.png" alt="Zelda Badge">
+              <a href="https://retroachievements.org/achievement/451345" target="_blank">Lake Lovin' (3)</a>
+              <p>The Legend of Zelda: Four Swords Adventures (GC)</p>
+              <label><input type="checkbox" id="body2"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/113196.png" alt="Pocket Fighter Badge">
+              <a href="https://retroachievements.org/achievement/105221" target="_blank">Muscle Maniac (10)</a>
+              <p>Pocket Fighter (PS1)</p>
+              <label><input type="checkbox" id="body3"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div id="skillLog" class="trait-box"></div>
+          <div class="achievement-row">
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/470061.png" alt="Jurassic Park Badge">
+              <a href="https://retroachievements.org/achievement/414940" target="_blank">Clever Girl (4)</a>
+              <p>Jurassic Park (ARC)</p>
+              <label><input type="checkbox" id="log1"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/333039.png" alt="Tetris Badge">
+              <a href="https://retroachievements.org/achievement/299819" target="_blank">Pressure's On (10)</a>
+              <p>Tetris (PSP)</p>
+              <label><input type="checkbox" id="log2"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/629876.png" alt="Real Monsters Badge">
+              <a href="https://retroachievements.org/achievement/554663" target="_blank">School's Out! (5)</a>
+              <p>Aaahh!!! Real Monsters (MD)</p>
+              <label><input type="checkbox" id="log3"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div id="skillCre" class="trait-box"></div>
+          <div class="achievement-row">
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/36573.png" alt="Picross Badge">
+              <a href="https://retroachievements.org/achievement/35701" target="_blank">Meowth! That's Picross! (5)</a>
+              <p>Picross NP Vol. 1 (SNES)</p>
+              <label><input type="checkbox" id="cre1"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/76349.png" alt="Pokemon Snap Badge">
+              <a href="https://retroachievements.org/achievement/70533" target="_blank">Amateur Photographer (10)</a>
+              <p>Pokémon Snap (N64)</p>
+              <label><input type="checkbox" id="cre2"></label>
+            </div>
+            <div class="achievement-card">
+              <img src="https://media.retroachievements.org/Badge/610793.png" alt="Gunstar Heroes Badge">
+              <a href="https://retroachievements.org/achievement/537695" target="_blank">Homing Havoc (5)</a>
+              <p>Gunstar Heroes (GG)</p>
+              <label><input type="checkbox" id="cre3"></label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="career" class="tab-content">
+        <div class="panel career-card">
+          <div id="careerArtist" class="trait-box">🎨 Artist</div>
+          <div class="career-levels">
+            <div class="achievement-card">
+              <p class="career-job">Caricaturist</p>
+              <p class="career-req"><em>Creativity 2+</em></p>
+              <img src="https://media.retroachievements.org/Badge/297254.png" alt="Bonanza Bros Badge">
+              <a href="https://retroachievements.org/achievement/8530" target="_blank">Portrait of a Thief (5)</a>
+              <p>Bonanza Bros. (MD)</p>
+              <label class="job-select"><input type="radio" name="career" value="Artist - Caricaturist"> Select Job</label>
+            </div>
+            <div class="achievement-card">
+              <p class="career-job">Visionary</p>
+              <p class="career-req"><em>Playful and Creativity 3</em></p>
+              <img src="https://media.retroachievements.org/Badge/280168.png" alt="Bully Badge">
+              <a href="https://retroachievements.org/achievement/252471" target="_blank">Artist (10)</a>
+              <p>Bully (PS2)</p>
+              <label class="job-select"><input type="radio" name="career" value="Artist - Visionary"> Select Job</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel career-card">
+          <div id="careerAthletic" class="trait-box">🥇 Athletic</div>
+          <div class="career-levels">
+            <div class="achievement-card">
+              <p class="career-job">Hydration Specialist</p>
+              <p class="career-req"><em>Body 2+</em></p>
+              <img src="https://media.retroachievements.org/Badge/129354.png" alt="Wave Race 64 Badge">
+              <a href="https://retroachievements.org/achievement/118543" target="_blank">Typhoon (10)</a>
+              <p>Wave Race 64 (N64)</p>
+              <label class="job-select"><input type="radio" name="career" value="Athletic - Hydration Specialist"> Select Job</label>
+            </div>
+            <div class="achievement-card">
+              <p class="career-job">Gold Medalist</p>
+              <p class="career-req"><em>Active and Body 3</em></p>
+              <img src="https://media.retroachievements.org/Badge/605658.png" alt="Downhill Domination Badge">
+              <a href="https://retroachievements.org/achievement/451035" target="_blank">Super Career Completed (25)</a>
+              <p>Downhill Domination (PS2)</p>
+              <label class="job-select"><input type="radio" name="career" value="Athletic - Gold Medalist"> Select Job</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel career-card">
+          <div id="careerBusiness" class="trait-box">💰 Business</div>
+          <div class="career-levels">
+            <div class="achievement-card">
+              <p class="career-job">Cold Caller</p>
+              <p class="career-req"><em>Charisma 2+</em></p>
+              <img src="https://media.retroachievements.org/Badge/512885.png" alt="Monopoly Badge">
+              <a href="https://retroachievements.org/achievement/453323" target="_blank">Making Pennybags Proud (5)</a>
+              <p>Monopoly (GBA)</p>
+              <label class="job-select"><input type="radio" name="career" value="Business - Cold Caller"> Select Job</label>
+            </div>
+            <div class="achievement-card">
+              <p class="career-job">Mogul</p>
+              <p class="career-req"><em>Outgoing and Charisma 3</em></p>
+              <img src="https://media.retroachievements.org/Badge/635722.png" alt="God of War Badge">
+              <a href="https://retroachievements.org/achievement/274793" target="_blank">Money Money Money (5)</a>
+              <p>God of War II (PS2)</p>
+              <label class="job-select"><input type="radio" name="career" value="Business - Mogul"> Select Job</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel career-card">
+          <div id="careerCriminal" class="trait-box">😈 Criminal</div>
+          <div class="career-levels">
+            <div class="achievement-card">
+              <p class="career-job">Crook</p>
+              <p class="career-req"><em>Charisma 1+ and Creativity 1+</em></p>
+              <img src="https://media.retroachievements.org/Badge/501570.png" alt="GTA Badge">
+              <a href="https://retroachievements.org/achievement/444694" target="_blank">The Family Business (5)</a>
+              <p>Grand Theft Auto: Chinatown Wars (PSP)</p>
+              <label class="job-select"><input type="radio" name="career" value="Criminal - Crook"> Select Job</label>
+            </div>
+            <div class="achievement-card">
+              <p class="career-job">Mob Boss</p>
+              <p class="career-req"><em>Active, Charisma 2+ and Creativity 2+</em></p>
+              <img src="https://media.retroachievements.org/Badge/539218.png" alt="Scarface Badge">
+              <a href="https://retroachievements.org/achievement/475341" target="_blank">Diaz Brothers (5)</a>
+              <p>Scarface: The World Is Yours (PS2)</p>
+              <label class="job-select"><input type="radio" name="career" value="Criminal - Mob Boss"> Select Job</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel career-card">
+          <div id="careerCulinary" class="trait-box">🍳 Culinary</div>
+          <div class="career-levels">
+            <div class="achievement-card">
+              <p class="career-job">Pot Washer</p>
+              <p class="career-req"><em>Cooking 2+</em></p>
+              <img src="https://media.retroachievements.org/Badge/155304.png" alt="Kingsley Badge">
+              <a href="https://retroachievements.org/achievement/139636" target="_blank">T'is But a Scratch (10)</a>
+              <p>Kingsley's Adventure (PS1)</p>
+              <label class="job-select"><input type="radio" name="career" value="Culinary - Pot Washer"> Select Job</label>
+            </div>
+            <div class="achievement-card">
+              <p class="career-job">Michelin Star Chef</p>
+              <p class="career-req"><em>Playful and Cooking 3</em></p>
+              <img src="https://media.retroachievements.org/Badge/413384.png" alt="Cel Damage Badge">
+              <a href="https://retroachievements.org/achievement/367307" target="_blank">Chef Lightning (10)</a>
+              <p>Cel Damage Overdrive (PS2)</p>
+              <label class="job-select"><input type="radio" name="career" value="Culinary - Michelin Star Chef"> Select Job</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel career-card">
+          <div id="careerLaw" class="trait-box">🚓 Law Enforcement</div>
+          <div class="career-levels">
+            <div class="achievement-card">
+              <p class="career-job">Rookie Cop</p>
+              <p class="career-req"><em>Logic 1+ and Mechanical 2+</em></p>
+              <img src="https://media.retroachievements.org/Badge/92913.png" alt="Resident Evil Badge">
+              <a href="https://retroachievements.org/achievement/84988" target="_blank">I'm Sorry… (2)</a>
+              <p>Resident Evil 2 (PS1)</p>
+              <label class="job-select"><input type="radio" name="career" value="Law Enforcement - Rookie Cop"> Select Job</label>
+            </div>
+            <div class="achievement-card">
+              <p class="career-job">Police Chief</p>
+              <p class="career-req"><em>Nice, Logic 2+ and Mechanical 2+</em></p>
+              <img src="https://media.retroachievements.org/Badge/666448.png" alt="Judge Dredd Badge">
+              <a href="https://retroachievements.org/achievement/584464" target="_blank">I'll Be the Judge of That (10)</a>
+              <p>Judge Dredd: Dredd vs. Death (GC)</p>
+              <label class="job-select"><input type="radio" name="career" value="Law Enforcement - Police Chief"> Select Job</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel career-card">
+          <div id="careerMedicine" class="trait-box">🏥 Medicine</div>
+          <div class="career-levels">
+            <div class="achievement-card">
+              <p class="career-job">Paramedic</p>
+              <p class="career-req"><em>Logic 2+</em></p>
+              <img src="https://media.retroachievements.org/Badge/465541.png" alt="Zombie Virus Badge">
+              <a href="https://retroachievements.org/achievement/411039" target="_blank">A Worm Feeling (10)</a>
+              <p>Zombie Virus (PS2)</p>
+              <label class="job-select"><input type="radio" name="career" value="Medicine - Paramedic"> Select Job</label>
+            </div>
+            <div class="achievement-card">
+              <p class="career-job">Brain Surgeon</p>
+              <p class="career-req"><em>Nice and Logic 3</em></p>
+              <img src="https://media.retroachievements.org/Badge/654486.png" alt="Theme Hospital Badge">
+              <a href="https://retroachievements.org/achievement/254486" target="_blank">Largechester</a>
+              <p>Theme Hospital (PS1)</p>
+              <label class="job-select"><input type="radio" name="career" value="Medicine - Brain Surgeon"> Select Job</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel career-card">
+          <div id="careerMilitary" class="trait-box">🪖 Military</div>
+          <div class="career-levels">
+            <div class="achievement-card">
+              <p class="career-job">Recruit</p>
+              <p class="career-req"><em>Mechanical 2+</em></p>
+              <img src="https://media.retroachievements.org/Badge/55264.png" alt="Wolfenstein Badge">
+              <a href="https://retroachievements.org/achievement/17089" target="_blank">Clear Floor 2 (5)</a>
+              <p>Wolfenstein 3D (SNES)</p>
+              <label class="job-select"><input type="radio" name="career" value="Military - Recruit"> Select Job</label>
+            </div>
+            <div class="achievement-card">
+              <p class="career-job">General</p>
+              <p class="career-req"><em>Neat and Mechanical 3</em></p>
+              <img src="https://media.retroachievements.org/Badge/393881.png" alt="Army Men Badge">
+              <a href="https://retroachievements.org/achievement/347589" target="_blank">Sarge in Wonderland (5)</a>
+              <p>Army Men: Sarge's Heroes (DC)</p>
+              <label class="job-select"><input type="radio" name="career" value="Military - General"> Select Job</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="aspiration" class="tab-content">
+        <div class="panel aspiration-card">
+          <div id="aspirationRomance" class="trait-box">❤️ Romance</div>
+          <div class="achievement-card">
+            <img src="https://media.retroachievements.org/Badge/480462.png" alt="Sims Love Machine Badge">
+            <a href="https://retroachievements.org/achievement/424958" target="_blank">Love Machine (5)</a>
+            <p>The Sims 2 (PS2)</p>
+            <label class="job-select"><input type="radio" name="aspiration" value="Romance"> Select Aspiration</label>
+          </div>
+        </div>
+
+        <div class="panel aspiration-card">
+          <div id="aspirationWealth" class="trait-box">💰 Wealth</div>
+          <div class="achievement-card">
+            <img src="https://media.retroachievements.org/Badge/480463.png" alt="Sims Cash Machine Badge">
+            <a href="https://retroachievements.org/achievement/424959" target="_blank">Cash Machine (5)</a>
+            <p>The Sims 2 (PS2)</p>
+            <label class="job-select"><input type="radio" name="aspiration" value="Wealth"> Select Aspiration</label>
+          </div>
+        </div>
+
+        <div class="panel aspiration-card">
+          <div id="aspirationKnowledge" class="trait-box">🧠 Knowledge</div>
+          <div class="achievement-card">
+            <img src="https://media.retroachievements.org/Badge/480464.png" alt="Sims Intellect Badge">
+            <a href="https://retroachievements.org/achievement/424960" target="_blank">Impressive Intellect (5)</a>
+            <p>The Sims 2 (PS2)</p>
+            <label class="job-select"><input type="radio" name="aspiration" value="Knowledge"> Select Aspiration</label>
+          </div>
+        </div>
+
+        <div class="panel aspiration-card">
+          <div id="aspirationPopularity" class="trait-box">⭐ Popularity</div>
+          <div class="achievement-card">
+            <img src="https://media.retroachievements.org/Badge/480465.png" alt="Sims Notable Badge">
+            <a href="https://retroachievements.org/achievement/424961" target="_blank">Noted Notable (5)</a>
+            <p>The Sims 2 (PS2)</p>
+            <label class="job-select"><input type="radio" name="aspiration" value="Popularity"> Select Aspiration</label>
+          </div>
+        </div>
+
+        <div class="panel aspiration-card">
+          <div id="aspirationCreativity" class="trait-box">🎨 Creativity</div>
+          <div class="achievement-card">
+            <img src="https://media.retroachievements.org/Badge/480466.png" alt="Sims Maestro Badge">
+            <a href="https://retroachievements.org/achievement/424962" target="_blank">Imagination Maestro (5)</a>
+            <p>The Sims 2 (PS2)</p>
+            <label class="job-select"><input type="radio" name="aspiration" value="Creativity"> Select Aspiration</label>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="action-btn-container">
+      <button id="global-generate-btn" class="action-button" onclick="generateAvatar()">
+        Generate Avatar
+      </button>
+    </div>
+
+    <div id="result" class="tab-content">
+      <div id="avatarCard" class="panel result-card">
+        <h2 id="resName"></h2>
+        <img id="resAvatar" class="avatar-image" alt="No Image Uploaded">
+        <div class="divider"></div>
+        <p><b>Personality</b></p>
+        <div id="resPersonality" class="result-list"></div>
+        <div class="divider"></div>
+        <p><b>Skills</b></p>
+        <div id="resSkills" class="result-list"></div>
+        <div class="divider"></div>
+        <p><b>Career</b></p>
+        <p><span id="resCareer"></span></p>
+        <div class="divider"></div>
+        <p><b>Aspiration</b></p>
+        <p><span id="resAspiration"></span></p>
+      </div>
+
+      <button class="action-button" onclick="backToEdit()">Edit</button>
+      <button class="action-button" onclick="saveAvatar()">Save as PNG</button>
+    </div>
+
+  </div>
+
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
